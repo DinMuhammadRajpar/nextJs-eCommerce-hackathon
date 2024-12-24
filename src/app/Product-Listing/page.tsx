@@ -1,7 +1,7 @@
 import React from "react";
-import ProductsBanner from "../components/Product-Banner/page";
-import Filter from "../components/Filter/page";
-import Listing from "../components/Listing-Section/page";
+import ProductsBanner from "../components/Product-Banner/product-banner";
+import Filter from "../components/Filter/filter";
+import Listing from "../components/Listing-Section/listing-section";
 
 const ProductListing = () => {
   const AllProducts = [

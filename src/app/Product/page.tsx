@@ -1,8 +1,8 @@
 import React from "react";
-import AboutProduct from "../components/About-Product/page";
-import Listing from "../components/Listing-Section/page";
-import FeaturesSection from "../components/Features-Section/page";
-import EmailSignup from "../components/Email-signup/page";
+import AboutProduct from "../components/About-Product/about-product";
+import Listing from "../components/Listing-Section/listing-section";
+import FeaturesSection from "../components/Features-Section/features-section";
+import EmailSignup from "../components/Email-signup/email-signup";
 
 const Product = () => {
   const heighlightedProducts = [

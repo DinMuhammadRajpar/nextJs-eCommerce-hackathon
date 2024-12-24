@@ -1,9 +1,9 @@
 import React from "react";
-import AboutUsHero from "../components/AboutUs-Hero/page";
-import AboutCollectionSection from "../components/About-Collection-Section/page";
-import FeaturesSection from "../components/Features-Section/page";
-import GetInTouch from "../components/GetInTouch-About/page";
-import EmailSignup from "../components/Email-signup/page";
+import AboutUsHero from "../components/AboutUs-Hero/about-us-hero";
+import AboutCollectionSection from "../components/About-Collection-Section/about-collection";
+import FeaturesSection from "../components/Features-Section/features-section";
+import GetInTouch from "../components/GetInTouch-About/get-in-touch-about";
+import EmailSignup from "../components/Email-signup/email-signup";
 
 const AboutPage = () => {
   return (

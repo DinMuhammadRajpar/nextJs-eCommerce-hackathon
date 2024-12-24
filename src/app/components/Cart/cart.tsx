@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -45,7 +47,7 @@ const Cart: React.FC<cartProps> = ({ items }) => {
           <div className="col-start-2 col-span-10 md:block hidden">
             <div className="border border-[#EBE8F4]"></div>
           </div>
-          {items.map((item, index) => (
+          {items.map((item) => (
             <React.Fragment key={item.id}>
               <div
                 className={`md:col-start-2 md:col-span-1 col-start-1 col-span-5 `}

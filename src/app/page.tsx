@@ -1,12 +1,11 @@
-import Image from "next/image";
-import Navbar from "./components/Navbar/page";
-import HeroSection from "./components/hero-section/page";
-import FeaturesSection from "./components/Features-Section/page";
-import Listing from "./components/Listing-Section/page";
-import PopularListing from "./components/Popular-Listing/page";
-import EmailSignup from "./components/Email-signup/page";
-import About from "./components/About-bottom/page";
-import Footer from "./components/Footer/page";
+"use client";
+
+import HeroSection from "./components/hero-section/hero-section";
+import FeaturesSection from "./components/Features-Section/features-section";
+import Listing from "./components/Listing-Section/listing-section";
+import PopularListing from "./components/Popular-Listing/popular-listing";
+import EmailSignup from "./components/Email-signup/email-signup";
+import About from "./components/About-bottom/about-bottom";
 
 export default function Home() {
   const heighlightedProducts = [
