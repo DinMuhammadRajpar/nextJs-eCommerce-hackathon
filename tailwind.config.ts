@@ -14,7 +14,7 @@ const config: Config = {
       },
       fontFamily: {
         satoshi: ["var(--font-satoshi, )" , "sans-serif"],
-        // clashDisplay: ["var(--font-clashDisplay, )" , "sans-serif"],
+        clashDisplay: ["var(--font-clashDisplay, )" , "sans-serif"],
       },
       screens: {
         xs: '392px',
