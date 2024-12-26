@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutCollectionSection = () => {
@@ -19,9 +20,11 @@ const AboutCollectionSection = () => {
           </div>
           <div className="col-start-1 md:col-span-1 col-span-2 md:py-[30px] md:px-[40px] md:mx-0 mx-3 px-4 py-4 bg-[#2A254B]">
             <div>
+            <Link href='/Product-Listing'>
               <button className="bg-[#F9F9F926] px-[30px] py-[20px] text-white self-center md:w-auto w-full  ">
                 View collection
               </button>
+              </Link>
             </div>
           </div>
 
