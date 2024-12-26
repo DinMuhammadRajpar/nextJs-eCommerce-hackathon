@@ -44,7 +44,7 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? "max-h-screen" : "max-h-0"
-          } overflow-hidden transition-all duration-400 ease-in-out text-center mb-2`}
+          } overflow-hidden transition-all duration-400 ease-in-out text-center mb-2 md:hidden block`}
         >
           <ul>
             <li>

@@ -25,7 +25,8 @@ const Listing: React.FC<listingProps> = ({
 }) => {
   return (
     <div>
-      <div id="products"
+      <div
+        id="products"
         className={`container w-full lg:w-[1182px] grid grid-cols-4 md:gap-x-[10px] gap-x-[10px] gap-y-[35px] auto-rows-auto auto-col-auto md:mx-auto px-3 ${className}`}
       >
         <div className="col-start-1 col-span-4">
