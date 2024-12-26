@@ -23,7 +23,7 @@ const PopularListing: React.FC<PopularListingProps> = ({
 }) => {
   return (
     <div>
-      <div className="container w-full lg:w-[1182px] grid grid-cols-4 md:gap-x-[10px] gap-x-[10px] gap-y-[35px] auto-rows-auto auto-col-auto md:mx-auto my-[40px] px-3 py-[40px]">
+      <div id="popular-listing" className="container w-full lg:w-[1182px] grid grid-cols-4 md:gap-x-[10px] gap-x-[10px] gap-y-[35px] auto-rows-auto auto-col-auto md:mx-auto my-[40px] px-3 py-[40px]">
         <div className="col-start-1 col-span-4">
           <h1 className="font-clashDisplay text-[32px] font-normal leading-[39.36px] text-start ">
             {heading}
@@ -77,9 +77,11 @@ const PopularListing: React.FC<PopularListingProps> = ({
           </div>
         ))}
         <div className="col-start-1 col-span-4 place-self-center text-center">
-          <button className="font-satoshi text-[16px] font-medium leading-[21.6px]  place-self-center border border-[#0000001A] rounded-[62px] px-[54px] py-[16px] hover:bg-[#F0EEED] transition duration-200 ease-in-out cursor-pointer">
-            {buttonText}
-          </button>
+          <Link href="/Product-Listing">
+            <button className="font-satoshi text-[16px] font-medium leading-[21.6px]  place-self-center border border-[#0000001A] rounded-[62px] px-[54px] py-[16px] hover:bg-[#F0EEED] transition duration-200 ease-in-out cursor-pointer">
+              {buttonText}
+            </button>
+          </Link>
         </div>
       </div>
     </div>

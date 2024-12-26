@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutProduct = () => {
@@ -84,9 +85,11 @@ const AboutProduct = () => {
               </div>
               <div className="md:col-start-9 col-start-1 md:col-span-2 col-span-12">
                 {/* <div className=""> */}
-                <button className="bg-[#2A254B] py-[16px] px-[18px] text-white md:w-[120px] w-full">
-                  Add to cart
-                </button>
+                <Link href="/shopping-cart">
+                  <button className="bg-[#2A254B] py-[16px] px-[18px] text-white md:w-[120px] w-full">
+                    Add to cart
+                  </button>
+                </Link>
                 {/* </div> */}
               </div>
             </div>

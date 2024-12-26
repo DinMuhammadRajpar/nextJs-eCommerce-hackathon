@@ -3,7 +3,7 @@ import React from "react";
 const EmailSignup = () => {
   return (
     <div>
-      <div className="w-full bg-[#F9F9F9] py-[40px] px-3">
+      <div id="email-contact" className="w-full bg-[#F9F9F9] py-[40px] px-3">
         <div className="container bg-white mx-auto lg:w-[1182px] py-[40px]">
           <div className="flex flex-col justify-center items-center gap-[50px]">
             <div className="flex flex-col items-center">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const AboutUsHero = () => {
@@ -11,10 +12,12 @@ const AboutUsHero = () => {
               customer service
             </h1>
           </div>
-          <div className="md:col-start-11 col-start-1 md:col-span-4 col-span-12 self-center justify-self-center">
-            <button className="px-[30px] py-[15px] bg-[#F9F9F9] font-satoshi text-[16px] font-normal leading-[24px] text-left">
+          <div className="md:col-start-11 col-start-1 md:col-span-4 col-span-12 self-center">
+            <Link href='/Product-Listing'>
+            <button className="w-full px-[30px] py-[15px] bg-[#F9F9F9] font-satoshi text-[16px] font-normal leading-[24px] text-center">
               View our products
             </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ const Footer = () => {
               <li>
                 {" "}
                 <Link
-                  href="#"
+                  href="/#products"
                   className="satoshi text-[14px] font-normal leading-[30.9px] text-left"
                 >
                   New arrivals
@@ -29,7 +29,7 @@ const Footer = () => {
               <li>
                 {" "}
                 <Link
-                  href="#"
+                  href="/#popular-listing"
                   className="satoshi text-[14px] font-normal leading-[30.9px] text-left"
                 >
                   Best sellers
@@ -38,7 +38,7 @@ const Footer = () => {
               <li>
                 {" "}
                 <Link
-                  href="#"
+                  href="/#products"
                   className="satoshi text-[14px] font-normal leading-[30.9px] text-left"
                 >
                   Recently viewed
@@ -47,7 +47,7 @@ const Footer = () => {
               <li>
                 {" "}
                 <Link
-                  href="#"
+                  href="/#popular-listing"
                   className="satoshi text-[14px] font-normal leading-[30.9px] text-left"
                 >
                   Popular this week
@@ -56,7 +56,7 @@ const Footer = () => {
               <li>
                 {" "}
                 <Link
-                  href="#"
+                  href="/Product-Listing"
                   className="satoshi text-[14px] font-normal leading-[30.9px] text-left"
                 >
                   All products
@@ -141,7 +141,7 @@ const Footer = () => {
               </li>
               <li>
                 {" "}
-                <Link href="#">Contact us</Link>
+                <Link href="/#email-contact">Contact us</Link>
               </li>
               <li>
                 {" "}
@@ -155,7 +155,7 @@ const Footer = () => {
               <li>
                 {" "}
                 <Link
-                  href="#"
+                  href="/#email-contact"
                   className="satoshi text-[14px] font-normal leading-[30.9px] text-left"
                 >
                   Returns policy
