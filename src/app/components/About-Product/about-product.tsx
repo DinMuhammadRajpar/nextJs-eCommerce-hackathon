@@ -19,9 +19,9 @@ const AboutProduct = ({ slug }: props) => {
   const [error, setError] = useState<string | null>(null);
   // const [quantitity] = useState<number>(1);
   // const [quantitity, setQuantity] = useState<number>(1);
-  useEffect(() => {
-    setCart(JSON.parse(localStorage.getItem("cart") || "{}"));
-  }, []);
+  // useEffect(() => {
+  //   setCart(JSON.parse(localStorage.getItem("cart") || "{}"));
+  // }, []);
   useEffect(() => {
     async function dataFetch() {
       try {
