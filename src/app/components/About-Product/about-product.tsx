@@ -1,16 +1,88 @@
+'use client'
+
+import { client } from "@/sanity/lib/client";
+import { product } from "@/types/product";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import toast, { Toaster } from 'react-hot-toast';
+import CircularProgress from '@mui/material/CircularProgress';
 
-const AboutProduct = () => {
+interface props{
+  slug: string;
+}
+
+
+const AboutProduct = ({slug}: props) => {
+  const [cart,setCart] = useState(JSON.parse('{}'))
+    const [productData, setProductData] = useState<product[] | []>([])
+    const [error, setError] = useState<string | null>(null);
+    const [quantitity,setQuantity] = useState<number>(1)
+    useEffect(()=>{
+        setCart(JSON.parse(localStorage.getItem('cart') || '{}'))
+        },[])
+    useEffect(() => {
+        async function dataFetch() {
+            try{
+                const data = await client.fetch(`*[_type == "product" && slug.current == "${slug}"]{
+                    _id,
+                    price,
+                    description,
+                    features,
+                    dimensions,
+                    name,
+                    slug,
+                    tags,
+                    "image" : image.asset->url
+                }`)
+                setProductData(data)
+            }catch(error){
+                console.log("Failed to load Products: ",error);
+                setError("Failed to load or there might be an internet issue...")
+            }
+          }
+          dataFetch()
+          
+        }, [slug])
+        const data = productData[0]
+        const notify = () => toast.success(`${quantitity} ${data.name} added in your cart.`, {
+        iconTheme: {
+              primary: '#2A254B',
+              secondary: '#FFFAEE',
+            }});
+      function handleAddToCart() {
+        if(cart[data.name]){
+            cart[data.name] = {
+                ...cart[data.name],
+                quantity:cart[data.name].quantity + quantitity
+            }
+        } else {
+            cart[data.name] = {
+                ...data,quantity : quantitity
+            }
+        }
+        if (typeof window !== 'undefined' && window.localStorage){
+        localStorage.setItem("cart",JSON.stringify(cart))
+        } else {
+            console.log("Use browser");
+            
+        }
+        setQuantity(1)
+        notify()
+      }
+
   return (
     <div>
+      {productData.length == 0? (error?<div className="flex justify-center items-center py-10 text-center h-[50vh] ">
+                                <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px]">{error}</p>
+                            </div>:
+                            <div className="flex justify-center items-center py-10 h-[50vh]"><CircularProgress color="inherit" /></div>):
       <div className="w-full">
         <div className="grid grid-cols-12 gap-y-[15px]">
           <div className="col-start-1 md:col-span-6 col-span-12">
             <Image
-              src="/Image Left.png"
-              alt="Produvt Image"
+              src= {data.image}
+              alt={data?.name}
               width={721}
               height={759}
               layout="responsive"
@@ -20,10 +92,12 @@ const AboutProduct = () => {
             <div className="grid grid-cols-12 gap-y-[20px]">
               <div className="md:col-start-2 col-start-1 md:col-span-6 col-span-12">
                 <h1 className="font-clashDisplay text-[36px] font-normal leading-[44.28px] text-left text-[#2A254B] mb-2">
-                  The Dandy Chair
+                  {/* The Dandy Chair  */}
+                  {data?.name}
                 </h1>
                 <h4 className="font-satoshi text-[24px] font-normal leading-[32.4px] text-left text text-[#2A254B]">
-                  £250
+                  {/* £250 */}
+                  {data?.price}
                 </h4>
               </div>
               <div className="md:col-start-2 col-start-1 md:col-span-9 col-span-12">
@@ -31,10 +105,11 @@ const AboutProduct = () => {
                   Product Description
                 </h3>
                 <p className="font-satoshi text-[16px] font-normal leading-[21.68px] text-left text-[#505977] mb-3">
-                  A timeless design, with premium materials features as one of
+                  {/* A timeless design, with premium materials features as one of
                   our most popular and iconic pieces. The dandy chair is perfect
                   for any stylish living space with beech legs and lambskin
-                  leather upholstery.
+                  leather upholstery. */}
+                  {data?.description}
                 </p>
                 <ul className="font-satoshi text-[16px] font-normal leading-[21.68px] text-left text-[#505977] list-disc">
                   <li className="ml-3">Premium material</li>
@@ -95,7 +170,7 @@ const AboutProduct = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };

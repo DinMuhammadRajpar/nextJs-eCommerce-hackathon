@@ -49,7 +49,7 @@ const Navbar = () => {
           <ul>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/plant-pots"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Plants pots
@@ -57,7 +57,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/ceramics"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Ceramics
@@ -65,7 +65,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/tables"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Tables
@@ -73,7 +73,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/chairs"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Chairs
@@ -81,7 +81,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/crockory"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Crockery
@@ -89,7 +89,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/tableware"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Tableware
@@ -97,7 +97,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/cutlery"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Cutlery
@@ -110,7 +110,7 @@ const Navbar = () => {
           <ul className="flex justify-center gap-5 py-4">
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/plant-pots"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Plants pots
@@ -118,7 +118,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/ceramics"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Ceramics
@@ -126,7 +126,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/tables"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Tables
@@ -134,7 +134,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/chairs"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Chairs
@@ -142,7 +142,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/crockory"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Crockery
@@ -150,7 +150,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/tableware"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Tableware
@@ -158,7 +158,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href={"/Product-Listing"}
+                href={"/Product-Listing/cutlery"}
                 className="font-satoshi text-[16px] font-normal leading-[21.6px] text-left text-[#726E8D]"
               >
                 Cutlery

@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
+
+// interface props{
+//   category : string
+// }
+
 const Filter = () => {
   return (
     <div>
