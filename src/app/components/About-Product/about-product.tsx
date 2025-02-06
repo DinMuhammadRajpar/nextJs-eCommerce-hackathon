@@ -14,7 +14,7 @@ interface props {
 
 const AboutProduct = ({ slug }: props) => {
   // const [cart, setCart] = useState(JSON.parse("{}"));
-  const [setCart] = useState(JSON.parse("{}"));
+  // const [setCart] = useState(JSON.parse("{}"));
   const [productData, setProductData] = useState<product[] | []>([]);
   const [error, setError] = useState<string | null>(null);
   // const [quantitity] = useState<number>(1);
