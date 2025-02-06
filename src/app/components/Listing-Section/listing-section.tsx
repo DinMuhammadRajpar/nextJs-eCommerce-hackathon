@@ -1,23 +1,25 @@
 import { client } from "@/sanity/lib/client";
-import { product } from "@/types/product";
+// import { product } from "@/types/product";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 
 interface Item {
-  id: number;
+  _id: string;
   src: string;
   alt: string;
-  productName: string;
-  productPrice: number;
+  name: string;
+  price: number;
+  imageUrl: string;
+  slug: string;
 }
 
-interface listingProps {
-  heading?: string;
-  buttonText: string;
-  items: Item[];
-  className?: string;
-}
+// interface listingProps {
+//   heading?: string;
+//   buttonText: string;
+//   items: Item[];
+//   className?: string;
+// }
 
 
 
@@ -76,7 +78,7 @@ const Listing= async () =>{
             New ceramics
           </h1>
         </div>
-        {new_ceremic.map((item: any) => (
+        {new_ceremic.map((item: Item) => (
           <div key={item._id} className=" md:col-span-1 col-span-2">
             <div className="relative w-full h-[289px] overflow-hidden rounded-lg">
               <Link href={`/Product/${item.slug}`}>

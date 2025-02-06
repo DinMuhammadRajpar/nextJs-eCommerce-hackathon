@@ -11,6 +11,8 @@ interface props {
 }
 
 
+
+
 const AllProductsListing = (props:props) => {
     // const all_products = await client.fetch(`*[_type == "product"]{
     //       _id,
@@ -25,13 +27,27 @@ const AllProductsListing = (props:props) => {
         result = "all items"
     }
 
-    const [position, setPosition] = React.useState(result)
+    const [position] = React.useState(result)
+
+    // const [position, setPosition] = useState<string>("all items");
+
+    // useEffect(() => {
+    //     // Update the position when the category prop changes
+    //     let result: string;
+    //     if (props.category === "all items" || props.category === "tableware" || props.category === "chairs" || props.category === "ceramics" || props.category === "tables" || props.category === "cutlery" || props.category === "crockory" || props.category === "plant-pots") {
+    //         result = props.category
+    //     } else {
+    //         result = "all items"
+    //     }
+
+    //     setPosition(result); // Update position state when category changes
+    // }, []);
     
     const [productData, setProductData] = useState<product[] | []>([])
-    const [error, setError] = useState<string | null>(null);
+    // const [error, setError] = useState<string | null>(null);
     useEffect(() => {
         setProductData([])
-        setError(null)
+        // setError(null)
         async function dataFetch() {
             try{
                 if(position == "all items"){
@@ -59,7 +75,7 @@ const AllProductsListing = (props:props) => {
                 }
             }catch(error){
                 console.log("Failed to load Products: ",error);
-                    setError("Failed to load or there might be an internet issue...")
+                    // setError("Failed to load or there might be an internet issue...")
             }
         }
         dataFetch()
@@ -80,7 +96,7 @@ const AllProductsListing = (props:props) => {
             All Products
           </h1>
         </div> */}
-        {productData.map((item: any) => (
+        {productData.map((item: product) => (
           <div key={item._id} className=" md:col-span-1 col-span-2">
             <div className="relative w-full h-[289px] overflow-hidden">
               <Link href={`/Product/${item.slug}`}>
@@ -121,5 +137,7 @@ const AllProductsListing = (props:props) => {
     </div>
   );
 }
+
+
 
 export default AllProductsListing;

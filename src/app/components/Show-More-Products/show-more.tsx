@@ -3,6 +3,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
+
+interface Item {
+  _id: string;
+  src: string;
+  alt: string;
+  name: string;
+  price: number;
+  image: string;
+  slug: string;
+}
+
+
 const ShowMoreProducts = async () => {
     const data = await client.fetch(`*[_type == "product"][0...4]{
         _id,
@@ -25,7 +37,7 @@ const ShowMoreProducts = async () => {
             You may also like
           </h1>
         </div>
-        {data.map((item: any) => (
+        {data.map((item: Item) => (
           <div key={item._id} className=" md:col-span-1 col-span-2">
             <div className="relative w-full h-[289px] overflow-hidden">
               <Link href={`/Product/${item.slug}`}>

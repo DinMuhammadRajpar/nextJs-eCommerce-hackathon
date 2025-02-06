@@ -11,10 +11,20 @@ interface PopularProducts {
   productPrice: number;
 }
 
-interface PopularListingProps {
-  heading?: string;
-  buttonText: string;
-  items: PopularProducts[];
+// interface PopularListingProps {
+//   heading?: string;
+//   buttonText: string;
+//   items: PopularProducts[];
+// }
+
+interface Item {
+  _id: string;
+  src: string;
+  alt: string;
+  name: string;
+  price: number;
+  imageUrl: string;
+  slug: string;
 }
 
 // const PopularListing: React.FC<PopularListingProps> = ({
@@ -64,7 +74,7 @@ const PopularListing = async () =>{
             </div>
           </div>
         </div>
-        {popular_products.map((item:any) => (
+        {popular_products.map((item: Item) => (
           <div key={item._id} className=" md:col-span-1 col-span-2">
             <div className="relative w-full h-[347px] overflow-hidden">
               <Link href={`/Product/${item.slug}`}>
