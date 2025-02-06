@@ -5,7 +5,7 @@ import { product } from "@/types/product";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 import CircularProgress from "@mui/material/CircularProgress";
 
 interface props {
@@ -13,10 +13,12 @@ interface props {
 }
 
 const AboutProduct = ({ slug }: props) => {
-  const [cart, setCart] = useState(JSON.parse("{}"));
+  // const [cart, setCart] = useState(JSON.parse("{}"));
+  const [setCart] = useState(JSON.parse("{}"));
   const [productData, setProductData] = useState<product[] | []>([]);
   const [error, setError] = useState<string | null>(null);
-  const [quantitity, setQuantity] = useState<number>(1);
+  const [quantitity] = useState<number>(1);
+  // const [quantitity, setQuantity] = useState<number>(1);
   useEffect(() => {
     setCart(JSON.parse(localStorage.getItem("cart") || "{}"));
   }, []);
@@ -44,13 +46,13 @@ const AboutProduct = ({ slug }: props) => {
     dataFetch();
   }, [slug]);
   const data = productData[0];
-  const notify = () =>
-    toast.success(`${quantitity} ${data.name} added in your cart.`, {
-      iconTheme: {
-        primary: "#2A254B",
-        secondary: "#FFFAEE",
-      },
-    });
+  // const notify = () =>
+  //   toast.success(`${quantitity} ${data.name} added in your cart.`, {
+  //     iconTheme: {
+  //       primary: "#2A254B",
+  //       secondary: "#FFFAEE",
+  //     },
+  //   });
   // function handleAddToCart() {
   //   if (cart[data.name]) {
   //     cart[data.name] = {

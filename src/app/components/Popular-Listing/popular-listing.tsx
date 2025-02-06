@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-interface PopularProducts {
-  id: number;
-  src: string;
-  alt: string;
-  productName: string;
-  productPrice: number;
-}
+// interface PopularProducts {
+//   id: number;
+//   src: string;
+//   alt: string;
+//   productName: string;
+//   productPrice: number;
+// }
 
 // interface PopularListingProps {
 //   heading?: string;
