@@ -17,7 +17,7 @@ const AboutProduct = ({ slug }: props) => {
   const [setCart] = useState(JSON.parse("{}"));
   const [productData, setProductData] = useState<product[] | []>([]);
   const [error, setError] = useState<string | null>(null);
-  const [quantitity] = useState<number>(1);
+  // const [quantitity] = useState<number>(1);
   // const [quantitity, setQuantity] = useState<number>(1);
   useEffect(() => {
     setCart(JSON.parse(localStorage.getItem("cart") || "{}"));
