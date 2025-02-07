@@ -109,7 +109,7 @@ const AboutProduct = ({ slug }: props) => {
                   </h1>
                   <h4 className="font-satoshi text-[24px] font-normal leading-[32.4px] text-left text text-[#2A254B]">
                     {/* £250 */}
-                    {data?.price}
+                    £{data?.price}
                   </h4>
                 </div>
                 <div className="md:col-start-2 col-start-1 md:col-span-9 col-span-12">
@@ -124,9 +124,10 @@ const AboutProduct = ({ slug }: props) => {
                     {data?.description}
                   </p>
                   <ul className="font-satoshi text-[16px] font-normal leading-[21.68px] text-left text-[#505977] list-disc">
-                    <li className="ml-3">Premium material</li>
+                    {data.features.map((i, index)=> <li key={index}>{i}</li>)}
+                    {/* <li className="ml-3">Premium material</li>
                     <li className="ml-3">Handmade upholstery</li>
-                    <li className="ml-3">Quality timeless classic</li>
+                    <li className="ml-3">Quality timeless classic</li> */}
                   </ul>
                 </div>
                 <div className="md:col-start-2 col-start-1 md:col-span-11 col-span-12">
@@ -139,7 +140,7 @@ const AboutProduct = ({ slug }: props) => {
                         Height
                       </h5>
                       <p className="font-satoshi text-[16px] font-normal leading-[21.68px] text-left text-[#505977]">
-                        110cm
+                        {data.dimensions.height}
                       </p>
                     </div>
                     <div className="border border-[#EBE8F4] md:hidden block"></div>
@@ -148,7 +149,7 @@ const AboutProduct = ({ slug }: props) => {
                         width
                       </h5>
                       <p className="font-satoshi text-[16px] font-normal leading-[21.68px] text-left text-[#505977]">
-                        75cm
+                      {data.dimensions.width}
                       </p>
                     </div>
                     <div className="border border-[#EBE8F4] md:hidden block"></div>
@@ -157,7 +158,7 @@ const AboutProduct = ({ slug }: props) => {
                         Depth
                       </h5>
                       <p className="font-satoshi text-[16px] font-normal leading-[21.68px] text-left text-[#505977]">
-                        50cm
+                      {data.dimensions.depth}
                       </p>
                     </div>
                   </div>
